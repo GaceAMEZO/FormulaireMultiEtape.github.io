@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire Multi-Étapes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Formulaire d'inscription</h1>
+    <div class="niveau">
+      <input type="range" min="0" max="100">
+    </div>
+  
+
+    <form id="formulaire">
+      <!-- Étape 1 -->
+      <section class="etape active" id="etape1">
+        <h2>Étape 1 : Informations personnelles</h2>
+
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" required>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" required>
+
+        <div class="navigation">
+          <button type="button" id="suivant1" class="btn">Suivant</button>
+        </div>
+      </section>
+
+      <!-- Étape 2 -->
+      <section class="etape" id="etape2">
+        <h2>Étape 2 : Coordonnées</h2>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" required>
+
+        <label for="telephone">Téléphone :</label>
+        <input type="tel" id="telephone" required>
+
+        <div class="navigation">
+          <button type="button" id="precedent1" class="btn secondaire">Précédent</button>
+          <button type="button" id="suivant2" class="btn">Suivant</button>
+        </div>
+      </section>
+
+      <!-- Étape 3 -->
+      <section class="etape" id="etape3">
+        <h2>Étape 3 : Confirmation</h2>
+
+        <p>Vérifie tes informations avant de valider :</p>
+        <div id="recapitulatif" class="recap"></div>
+
+        <div class="navigation">
+          <button type="button" id="precedent2" class="btn secondaire">Précédent</button>
+          <button type="submit" class="btn valider">Valider</button>
+        </div>
+      </section>
+
+      <!-- Étape 4 (merci) -->
+      <section class="etape" id="etape4">
+        <h2>Merci pour votre inscription !</h2>
+        <p>Votre formulaire a bien été envoyé.</p>
+      </section>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
